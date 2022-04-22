@@ -49,7 +49,8 @@ def run(args, get_tweets: bool = True, train_model: bool = True,
         for i, model in enumerate(models):
             print(f'Generating text for cluster {model}')
             generate_text.main(prompt_text=prompt,
-                               cfg=cfg)
+                               cfg=cfg,
+                               model_checkpoint=model)
 
     print(f'Finished After {time.time() - starting_time} seconds')
 

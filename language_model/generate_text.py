@@ -1,4 +1,6 @@
 """Generate text from a trained language model."""
+import os
+
 import numpy as np
 import torch
 
@@ -68,8 +70,8 @@ def generate_text(prompt_text: str, model, tokenizer, cfg: Config):
         print("\n" + 100 * '-')
 
 
-def main(prompt_text: str, cfg: Config = Config()):
+def main(prompt_text: str, model_checkpoint: str, cfg: Config = Config()):
     tokenizer, model = load_model(get_model_name(cfg))
-    model.load_state_dict(torch.load(cfg.run_config.models_path))
+    model.load_state_dict(torch.load(os.path.join(cfg.run_config.models_path, model_checkpoint)))
     model.eval()
     generate_text(prompt_text, model, tokenizer, cfg)

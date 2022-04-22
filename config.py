@@ -40,8 +40,8 @@ class NetworkConfig:
         self.learning_rate = 3e-5
         self.max_seq_len = 128
         self.english_model = 'gpt2'
-        self.small_hebrew_model = 'Norod78/hebrew-gpt_neo-xl'
-        self.large_hebrew_model = 'Norod78/hebrew-gpt_neo-small'
+        self.small_hebrew_model = 'Norod78/hebrew-gpt_neo-small'
+        self.large_hebrew_model = 'Norod78/hebrew-gpt_neo-xl'
         self.language = 'hebrew'
         self.model_size = 'small'
 
