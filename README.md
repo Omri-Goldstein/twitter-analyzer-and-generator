@@ -8,6 +8,14 @@ This work was inspired by the ["Parliament Project"](https://icc.ise.bgu.ac.il/y
 `git clone git@github.com:Omri-Goldstein/twitter-analyzer-and-generator.git`
 
 `pip install -r requirements`
+
+# Setting the Twitter API keys
+1. Create a [developer account](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) and generate keys.
+2. Add the keys to your enviroment variables:
+
+`export API_KEY=YOUR_API_KEY`
+
+`export API_SECRET_KEY=API_SECRET_KEY`
 # Running
 Edit the lines:
 `    run(get_tweets=True, train_model=True, generate_tweets=True,
@@ -18,7 +26,7 @@ in the `main.py` file  based in your preference (command line arguments will be 
 
 Then run `python main.py`
 
-In order to get the tweets and build the network graph, set 'get_tweets=True'. If you have already got your texts of interets, you can set it to False (and edit the `config.py` file accordingly).
+In order to get the tweets and build the network graph, set 'get_tweets=True'. If you have already got your texts of interest, you can set it to False (and edit the `config.py` file accordingly).
 
 Set `train_model=True` to finetune a language model based on the training configs. If you have already saved the models, this can be set to False.
 
