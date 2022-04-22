@@ -11,7 +11,7 @@ This work was inspired by the ["Parliament Project"](https://icc.ise.bgu.ac.il/y
 
 # Setting the Twitter API keys
 1. Create a [developer account](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) and generate keys.
-2. Add the keys to your enviroment variables:
+2. Add the keys to your environment variables:
 
 `export API_KEY=YOUR_API_KEY`
 
